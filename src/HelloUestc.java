@@ -17,15 +17,15 @@ public class HelloUestc {
         //3、点击登录,自动跳转到登录页面
         dr.findElement(By.xpath("//div[@id='toptb']/div[2]/a[1]")).click();
         //4、输入用户名
-        dr.findElement(By.name("username")).sendKeys("跑步小分队");
+        dr.findElement(By.name("username")).sendKeys("xxx");
         //5、输入密码
-        dr.findElement(By.name("password")).sendKeys("qinling1989");
+        dr.findElement(By.name("password")).sendKeys("xxx");
         //6、点击登录,并等待页面跳转
         dr.findElement(By.name("loginsubmit")).click();
         System.out.println(dr.getCurrentUrl());
-        try{
+        try {
             Thread.sleep(10000);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
         System.out.println(dr.getCurrentUrl());
@@ -39,6 +39,7 @@ public class HelloUestc {
         //10、关闭浏览器
         dr.quit();
     }
+}
     /*//切换浏览器到新窗口页面的方法
     private static void switchWindow(WebDriver dr){
         for(String winHandle:dr.getWindowHandles()){
@@ -46,6 +47,4 @@ public class HelloUestc {
         }
     }
     */
-
-
-}
+//}
